@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Django Course</title>
+  </head>
+  <body>
+    {% for name in names %} {{ forloop.counter0 }}{{ name }} <br />
+    {% endfor %} {% for name in names %} {{ forloop.revcounter }}{{ name }}
+    <br />
+    {% endfor %}
+  </body>
+</html>

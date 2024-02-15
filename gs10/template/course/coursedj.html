@@ -46,8 +46,13 @@
     <div class="container">
         <h1>{{name}}</h1>
         <div class="details">
-            <p><span class="name">Name:</span>{{name}}</p>
-            <p><span class="course">Course:</span>{{course}}</p>
+            <p><span class="name">Name: </span>{{name}}</p>
+            <p><span class="course">Course: </span>{{course}}</p>
+            <p><span class="name">Date: </span>
+                <!-- {{dt|date:'D d M Y'}} -->
+            {{dt|date:'SHORT_DATE_FORMAT'}}
+                <!-- {{dt|time:'H:i'}}</p> -->
+                {{dt|time:'TIME_FORMAT'}}</p>
         </div>
     </div>
 </body>
