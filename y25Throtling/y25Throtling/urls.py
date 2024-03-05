@@ -5,7 +5,7 @@ from api import views
 from rest_framework.routers import DefaultRouter
 
 #for token genration-
-from rest_framework_simplejwt.views import TokenObtainPairView,TokenRefreshView,TokenVerifyView
+
 
 
 
@@ -15,9 +15,7 @@ router.register('studentapi', views.StudentModelViewSet, basename='student')
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include(router.urls)),
-    path('gettoken/', TokenObtainPairView.as_view()),
-    path('refreshtoken/', TokenRefreshView.as_view()),
-    path('verifytoken/', TokenVerifyView.as_view()),
+    path('auth/',include('rest_framework.urls',namespace='rest_framework'))
    
 ]
 
